@@ -10,7 +10,7 @@
         </div>
 
  
-        <form method="POST" action="">
+        <form method="POST" action="" enctype="multipart/form-data">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
                 <legend class="bodred-bottom mb-4">Account Info</legend>
@@ -51,7 +51,7 @@
                     {{ form.picture(class="form-control-file") }}
                     {% if form.picture.errors %}
                         {% for error in form.picture.errors %}
-                            <span>{{ error }}</span>
+                            <span class='text-danger'>{{ error }}</span><br>
                         {% endfor %}
                     {% endif %}
                 </div>
