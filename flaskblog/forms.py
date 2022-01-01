@@ -72,7 +72,7 @@ class UpdateAccountForm(FlaskForm):
     # Submit Field
     submit = SubmitField('Update')
 
-    # Validating new account
+    # Validation for account update
     def validate_username(self, username):
         if username.data != current_user.username:
             user = User.query.filter_by(username=username.data).first()
