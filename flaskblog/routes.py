@@ -156,8 +156,8 @@ def delete_post(post_id):
 
 
 
-@app.route("/user/<str:username>")
-def user_post(username):
+@app.route("/user/<string:username>")
+def user_posts(username):
     page = request.args.get('page', 1, type=int)
     user = User.query.filter_by(username=username).first_or_404()
     posts = Post.query.filter_by(author=user)\
