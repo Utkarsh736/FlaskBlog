@@ -196,7 +196,7 @@ def reset_request():
 
 
 @app.route("/reset_password/<token>", methods=['GET', 'POST'])
-def reset_request(token):
+def reset_token(token):
     if current_user.is_authenticated:
         return redirect(url_for('home'))
 
